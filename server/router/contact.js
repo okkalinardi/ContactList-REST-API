@@ -10,4 +10,6 @@ router.delete('/:id', controller.deleteContact)
 
 router.put('/:id', controller.editContact)
 
+router.get('/:id', controller.getOne)
+
 module.exports = router

@@ -11,6 +11,17 @@ class contactController{
         })
     }
 
+    static getOne(req, res){
+        contact.findOne({where:{id:req.params.id}})
+        .then(contactData=>{
+            res.json(contactData)
+            
+        })
+        .catch(err=>{
+            res.send(err)
+        })
+    }
+
     static addContact(req, res){
         contact.create({
             name:req.body.name,
